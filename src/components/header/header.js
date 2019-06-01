@@ -48,7 +48,7 @@ const StyledHeader = styled.header`
   right: 0;
   z-index: 9999;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 2fr 1fr 2fr;
   align-items: center;
   padding: ${props => (props.scroll > 124 ? "2rem" : "3rem")};
   background: ${props => props.theme.color.gray_75};

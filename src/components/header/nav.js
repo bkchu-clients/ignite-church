@@ -24,6 +24,7 @@ export default Nav
 const StyledNav = styled.div`
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   .nav {
     &__link {
       ${props => props.theme.font.no_underline}
