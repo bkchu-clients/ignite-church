@@ -10,14 +10,23 @@ export const theme = {
     orange: "#F08700",
   },
   font: {
-    header: css`
+    h1: css`
       font-family: "Roboto Condensed";
       font-weight: bold;
+      letter-spacing: 0.5rem;
+    `,
+    h2: css`
+      font-family: "Roboto Condensed";
+      font-weight: normal;
+      font-size: 5rem;
       letter-spacing: 0.5rem;
     `,
     no_underline: css`
       text-decoration: none;
     `,
+  },
+  shadow: {
+    box: "0 0 0 1px rgba(255,255,255,.1), 0 2px 4px 0 rgba(14,30,37,.12)",
   },
 }
 

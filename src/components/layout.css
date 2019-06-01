@@ -8,8 +8,10 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 8px !important;
   height: 100% !important;
+}
+body, html {
+  font-size: 8px !important;
 }
 article,
 aside,
@@ -188,7 +190,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  /* font: 112.5%/1.45em georgia, serif; */
   box-sizing: border-box;
   overflow-y: scroll;
 }
