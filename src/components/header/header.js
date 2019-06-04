@@ -18,14 +18,16 @@ const Header = ({ siteTitle }) => {
 
   return (
     <StyledHeader scroll={scroll}>
-      <h1 className="header__title-container">
-        <Link className="header__title" to="/">
-          {siteTitle}
+      <div className="header__title-logo-container">
+        <Link className="header__logo-container" to="/">
+          <Image className="header__logo" name={"geofire.png"} alt="logo" />
         </Link>
-      </h1>
-      <Link className="header__logo-container" to="/">
-        <Image className="header__logo" name={"geofire.png"} alt="logo" />
-      </Link>
+        <h1 className="header__title-container">
+          <Link className="header__title" to="/">
+            {siteTitle}
+          </Link>
+        </h1>
+      </div>
       <Nav scroll={scroll} />
     </StyledHeader>
   )
@@ -48,7 +50,8 @@ const StyledHeader = styled.header`
   right: 0;
   z-index: 9999;
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-columns: 2fr 2fr;
+  justify-items: space-between;
   align-items: center;
   padding: ${props => (props.scroll > 124 ? "2rem" : "3rem")};
   background: ${props => props.theme.color.gray_75};
@@ -61,6 +64,12 @@ const StyledHeader = styled.header`
   }
 
   .header {
+    &__title-logo-container {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+    }
+
     &__logo-container {
       justify-self: center;
     }
@@ -74,7 +83,6 @@ const StyledHeader = styled.header`
       box-shadow: ${props => props.theme.shadow.box};
       border-radius: 50%;
     }
-
 
     &__title-container {
       margin: 0;

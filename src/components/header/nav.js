@@ -38,6 +38,22 @@ const StyledNav = styled.div`
       &:last-of-type {
         padding-right: 0;
       }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-top: 2px;
+        background-color: ${props => props.theme.color.red};
+        transition: all 0.4s;
+      }
+      &:hover:after {
+        width: 100%;
+      }
+      &[nounderline]:after {
+        display: none;
+      }
     }
   }
 `
